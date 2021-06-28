@@ -7,7 +7,7 @@ const PostList = () => {
   const [posts, setPosts] = useState({});
 
   const fetchPosts = async () => {
-    const res = await axios.get('http://localhost:4002/posts');
+    const res = await axios.get('http://posts.com/posts');
     setPosts(res.data);
   };
 
@@ -17,8 +17,8 @@ const PostList = () => {
 
   const renderedPosts = Object.values(posts).map(post => {
     return(
-      <div 
-        className="card" 
+      <div
+        className="card"
         style={{width: '30%', marginBottom: '20px'}}
         key={post.id}
       >
